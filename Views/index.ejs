@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Store</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-4">Phone Store</h1>
+    <div class="row">
+      <% phones.forEach(phone => { %>
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="<%= phone.image_url %>" alt="<%= phone.name %>">
+            <div class="card-body">
+              <h5 class="card-title"><%= phone.name %></h5>
+              <p class="card-text"><%= phone.description %></p>
+              <p class="card-text">$<%= phone.price %></p>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</body>
+</html>
